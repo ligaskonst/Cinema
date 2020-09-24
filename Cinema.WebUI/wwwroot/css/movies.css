@@ -1,0 +1,33 @@
+﻿.movie-content {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 10px 0px #c9c9c9;
+  -moz-box-shadow: 0px 0px 10px 0px #c9c9c9;
+  box-shadow: 0px 0px 10px 0px #c9c9c9; }
+  .movie-content .image-content {
+    border-right: 1px solid #c9c9c9; }
+    .movie-content .image-content img {
+      width: inherit; }
+  .movie-content .information-content table td {
+    vertical-align: top;
+    padding: 5px; }
+  .movie-content .information-content table td.text-right {
+    font-weight: 500; }
+  .movie-content .control-content {
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+    font-size: 20px; }
+    .movie-content .control-content i.fa {
+      cursor: pointer;
+      opacity: 0.5; }
+      .movie-content .control-content i.fa:hover {
+        opacity: 1; }
+      .movie-content .control-content i.fa.fa-pencil {
+        color: green; }
+      .movie-content .control-content i.fa.fa-trash {
+        color: red; }
+
+.error-message {
+  color: red; }

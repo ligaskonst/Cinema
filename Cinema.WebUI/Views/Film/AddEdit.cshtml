@@ -1,0 +1,34 @@
+﻿@model FilmFileModel
+@if (!string.IsNullOrEmpty(@ViewBag.MessageError))
+{
+    <p class="error-message">@ViewBag.MessageError</p>
+}
+    <form asp-controller="Film" asp-action="@(Model.Id == Guid.Empty ? "NewFilm" : "EditFilm")" method="post" enctype="multipart/form-data">
+        <input asp-for="UserId" type="hidden" />
+        <input asp-for="Id" type="hidden" />
+        <input asp-for="Poster" type="hidden" />
+        @if (!string.IsNullOrEmpty(Model.Poster))
+        {
+            <img src="@Model.Poster" alt="@Model.Poster" />
+        }
+        <div class="form-group">
+            <input asp-for="FormFile" class="form-control" accept="image/*" />
+        </div>
+        <div class="form-group">
+            <label for="Title">Title</label>
+            <input asp-for="Title" class="form-control" placeholder="Enter title" />
+        </div>
+        <div class="form-group">
+            <label for="Producer">Producer</label>
+            <input asp-for="Producer" class="form-control" placeholder="Enter producer" />
+        </div>
+        <div class="form-group">
+            <label for="ReleaseYear">Producer</label>
+            <input asp-for="ReleaseYear" class="form-control" placeholder="Enter ReleaseYear" />
+        </div>
+        <div class="form-group">
+            <label for="Description">Description</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Ok</button>
+    </form>

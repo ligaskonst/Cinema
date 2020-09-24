@@ -1,0 +1,13 @@
+﻿@model Cinema.WebUI.Models.FilmControlModel
+
+@if (Model.HasAccess)
+{
+    <span class="control-content">
+        <a href="/Film/EditFilm/@Model.Id">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+        </a>
+        <a href="/Film/Remove/@Model.Id">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        </a>
+    </span>
+}

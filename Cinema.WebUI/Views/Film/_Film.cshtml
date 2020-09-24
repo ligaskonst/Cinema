@@ -1,0 +1,27 @@
+﻿@model Cinema.Domain.FilmModel
+
+<div class="row movie-content">
+
+    @await Component.InvokeAsync("FilmControl", Model)
+
+    <div class="col-md-2 image-content">
+        <img src="~/Images/movies/1/mulan.jpg" alt="~/Images/movies/1/mulan.jpg"/>
+    </div>
+    <div class="col-md-10 information-content">
+        <h2>@Model.Title</h2>
+        <table>
+            <tr>
+                <td class="text-right">Release:</td>
+                <td>@Model.ReleaseYear</td>
+            </tr>
+            <tr>
+                <td class="text-right">Producer:</td>
+                <td>@Model.Producer</td>
+            </tr>
+            <tr>
+                <td class="text-right">Description:</td>
+                <td>@Model.Description</td>
+            </tr>
+        </table>
+    </div>
+</div>
